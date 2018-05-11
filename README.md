@@ -2,4 +2,4 @@
 
 - thought and things about docker-machine on apple MacOS High Sierra
 
-
+[prerequisite](doc/prerequisite.md)
