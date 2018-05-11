@@ -1,27 +1,21 @@
 # prerequisite
 
-## Virtualbox 
-
-### Install for Mac
+## install Virtualbox
 
 - [Download](https://www.virtualbox.org/wiki/Downloads)
 - follow instruction of page
 
-### Virtualbox extension pack
+## install Virtualbox extension pack
 
 - [VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads)
 - follow instruction of page
 
-## docker
-
-### install docker for mac
+## install docker
 
 - [download CE version](https://store.docker.com/editions/community/docker-ce-desktop-mac)
 - follow instruction of page
 
-## docker machine
-
-### install docker-maschine
+## install docker-machine
 
 - [instruction](https://docs.docker.com/machine/install-machine/)
 - follow instruction of page
@@ -37,7 +31,7 @@ base=https://github.com/docker/machine/releases/download/v0.14.0 &&
 ## check all works correctly
 
 
-### VirtualBox check
+### VirtualBox check (weak check)
 
 - try to start VirtualBox GUI
 - and check VBoxMange on cli
