@@ -95,6 +95,9 @@ docker-machine create --driver  virtualbox --virtualbox-cpu-count=4 --virtualbox
 
 ## kill docker-machine
 
+- kill only if the machine are not response of docker-machine stop or you can not login via docker-machine ssh
+- for debug seethe output of the virtualbox GUI to
+
 ```bash
 > docker-machine kill <name of vm>
 > docker-machine kill vbox-test
@@ -121,4 +124,11 @@ docker-machine create --driver  virtualbox --virtualbox-cpu-count=4 --virtualbox
 ```bash
 > curl $(docker-machine ip <name of machine>):<published port>
 > curl $(docker-machine ip vbox-test):8000
+```
+
+## remove docker-machine
+
+```bash
+> docker-machine rm <name of machine>
+> docker-machine rm vbox-test
 ```
