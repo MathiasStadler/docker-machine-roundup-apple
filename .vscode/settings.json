@@ -6,6 +6,7 @@
         "markdownlint",
         "nginx",
         "stadler",
+        "tcuser",
         "uname",
         "vbox"
     ]

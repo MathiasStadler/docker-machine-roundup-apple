@@ -72,12 +72,58 @@ docker-machine create --driver  virtualbox --virtualbox-cpu-count=4 --virtualbox
 > eval $(docker-machine env another-docker-machine)
 ```
 
+## display which machine is active under control from your local docker cli
+
+```bash
+> docker-machine active
+```
+
+- very useful for script
+- e.g. see the ssh kez login script
+
 ## login in docker-machine
 
 ```bash
 > docker-machine ssh <name of machine>
 > docker-machine ssh vbox-test
 ```
+
+or
+
+- login via ssh direct
+
+```bash
+> ssh docker@$(docker-machine ip <name of machine>)
+> ssh docker@$(docker-machine ip vbox-test)
+```
+
+- the default password is **tcuser**
+
+or
+
+- login via ssh with the kez
+
+- all credits goes to [robert](https://stackoverflow.com/questions/30330442/how-to-ssh-into-docker-machine-virtualbox-instance)
+
+```bash
+script_name="docker-machine-kez-virtualbox-login.sh"
+cat > ./${script_name} << 'EOL'
+#!/bin/bash
+if !  docker-machine active; then
+ echo "No active machine";
+ echo "Set first with docker-machine env <name of machine>" ;
+exit 1
+fi
+docker_machine_name=$(docker-machine active)
+docker_ssh_user=$(docker-machine inspect $docker_machine_name --format={{.Driver.SSHUser}})
+docker_ssh_key=$(docker-machine inspect $docker_machine_name --format={{.Driver.SSHKeyPath}})
+docker_ssh_port=$(docker-machine inspect $docker_machine_name --format={{.Driver.SSHPort}})
+ssh -i $docker_ssh_key -p $docker_ssh_port $docker_ssh_user@localhost
+EOL
+chmod +x ./${script_name}
+```
+
+@TODO Add accept kez without extra confirm
 
 ## stop docker-machine
 
