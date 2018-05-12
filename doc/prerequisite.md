@@ -30,7 +30,6 @@ base=https://github.com/docker/machine/releases/download/v0.14.0 &&
 
 ## check all works correctly
 
-
 ### VirtualBox check (weak check)
 
 - try to start VirtualBox GUI
@@ -62,7 +61,6 @@ hello-world         latest              e38bc07ac18e        4 weeks ago         
 ```
 
 - [detail instruction see here](https://hub.docker.com/_/hello-world/)
-
 
 ## docker-machine check
 

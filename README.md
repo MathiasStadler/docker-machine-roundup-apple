@@ -1,6 +1,7 @@
-
+<!-- markdownlint-disable MD041 -->
 > I would greatly appreciate it if you kindly give me some feedback if you found an error
 > [Send feedback to me](mailto:feedback@mathias-stadler.de)
+<!-- markdownlint-enable MD041 -->
 
 # docker-machine-roundup-apple
 
